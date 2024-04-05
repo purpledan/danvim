@@ -11,13 +11,7 @@ return {
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
 	{
-		'arzg/vim-colors-xcode',
-		config = function()
-			vim.cmd('colorscheme xcode')
-		end
-	},
-	{
-		'folke/tokyonight.nvim'
+		'arzg/vim-colors-xcode'
 	},
 	{
 		'theprimeagen/harpoon'
@@ -56,5 +50,26 @@ return {
 
 	{
 		'L3MON4D3/LuaSnip'
-	}
+	},
+    {
+        'mfussenegger/nvim-lint'
+    },
+    {
+        'lvimuser/lsp-inlayhints.nvim'
+    },
+    {
+        'folke/twilight.nvim'
+    },
+    {   
+        'brenoprata10/nvim-highlight-colors'
+    },
+    {
+        'savq/melange-nvim'
+    },
+    {
+        "catppuccin/nvim", name = "cappuccin"
+    },
+    {
+        'cryptomilk/nightcity.nvim'
+    }
 }

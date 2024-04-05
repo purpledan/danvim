@@ -13,6 +13,8 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+
+    require("lsp-inlayhints").on_attach(client, bufnr)
 end)
 
 local cmp = require('cmp')
@@ -28,7 +30,7 @@ cmp.setup({
 	{name = 'buffer', keyword_length = 3},
 	},
 
-	formatting = lsp_zero.cmp_format({details = false}),
+	formatting = lsp_zero.cmp_format({details = true}),
 	mapping = cmp.mapping.preset.insert({
 		['<CR>'] = cmp.mapping.confirm({select = true}),
 		['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),

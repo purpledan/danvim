@@ -1,3 +1,6 @@
+# Lazy-lock file
+*.json
+
 # Prerequisites
 *.d
 
