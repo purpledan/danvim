@@ -4,5 +4,7 @@ function ColorMyPencils(color)
 end
 
 ColorMyPencils()
+vim.opt.termguicolors = true
+require('nvim-highlight-colors').setup({})
 
 vim.cmd.colorscheme('nightcity')

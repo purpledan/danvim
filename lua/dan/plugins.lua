@@ -47,15 +47,18 @@ return {
 	{
 		'hrsh7th/cmp-nvim-lua'
 	},
-
 	{
 		'L3MON4D3/LuaSnip'
 	},
     {
-        'mfussenegger/nvim-lint'
+        'folke/trouble.nvim',
+        opts = {
+            icons = false}
     },
     {
-        'lvimuser/lsp-inlayhints.nvim'
+        'folke/todo-comments.nvim',
+        dependencies = {"nvim-lua/plenary.nvim"},
+        opts = {}
     },
     {
         'folke/twilight.nvim'
