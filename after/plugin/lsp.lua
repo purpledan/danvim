@@ -1,7 +1,7 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('lspconfig').clangd.setup({
     capabilities = capabilities,
-    cmd = {"clangd",
+    cmd = {"clangd18",
         "--clang-tidy",
         "--background-index",
         "--header-insertion=iwyu",
@@ -11,4 +11,8 @@ require('lspconfig').clangd.setup({
         "--enable-config"}, 
 })
 
-require('lspconfig').julials.setup({})
+require('lspconfig').julials.setup({
+    capabilities = capabilities })
+
+require('lspconfig').texlab.setup({
+    capabilities = capabilities })
