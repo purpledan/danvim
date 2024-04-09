@@ -4,15 +4,19 @@ require('lspconfig').clangd.setup({
     cmd = {"clangd18",
         "--clang-tidy",
         "--background-index",
-        "--header-insertion=iwyu",
+        "--all-scopes-completion=false",
         "--completion-style=detailed",
+        "--header-insertion=never",
         "--function-arg-placeholders",
         "--fallback-style=llvm",
-        "--enable-config"}, 
+        "--enable-config"},
 })
 
 require('lspconfig').julials.setup({
     capabilities = capabilities })
 
 require('lspconfig').texlab.setup({
-    capabilities = capabilities })
+    on_attach = function(client)
+        client.server_capabilities.completionProvider = false
+    end
+})
