@@ -15,6 +15,8 @@ require('lspconfig').clangd.setup({
 require('lspconfig').julials.setup({
     capabilities = capabilities })
 
+require('lspconfig').zls.setup({})
+
 require('lspconfig').texlab.setup({
     on_attach = function(client)
         client.server_capabilities.completionProvider = false
