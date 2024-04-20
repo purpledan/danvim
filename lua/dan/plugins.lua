@@ -58,8 +58,7 @@ return {
     },
     {
         'folke/trouble.nvim',
-        opts = {
-            icons = false}
+        dependencies = {'nvim-tree/nvim-web-devicons'}
     },
     {
         'folke/todo-comments.nvim',
@@ -71,6 +70,10 @@ return {
     },
     {   
         'brenoprata10/nvim-highlight-colors'
+    },
+    {
+        'kevinhwang91/nvim-ufo',
+        dependencies = { 'kevinhwang91/promise-async' }
     },
     {
         'savq/melange-nvim'
@@ -93,5 +96,5 @@ return {
     },
     {
         { 'echasnovski/mini.nvim', version = false },
-    }
+    },
 }
